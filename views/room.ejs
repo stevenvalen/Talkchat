@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Talkchat</title>
+
+<style>
+
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #message-container {
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    #message-container div {
+        background-color: whitesmoke;
+        padding: 5px;
+        font-style: Helvetica Light;
+        border-radius: 5px;
+        padding-left : 5px;
+        max-height: 40px;
+        height: 30px;
+    }
+
+    #message-container div:nth-child(2n) {
+        background-color: #077EFD;
+        font-style: Helvetica Light;
+        color : white;
+        border-radius: 5px;
+        padding-right : 5px;
+        max-height: 40px;
+        height: 30px;
+    }
+
+    #send-container {
+        position: fixed;
+        padding-bottom: 30px;
+        bottom: 0;
+        background-color: white;
+        max-width: 1200px;
+        width: 80%;
+        display: flex;
+    }
+
+    #message-input {
+        flex-grow: 1;
+    }
+</style>
+</head>
+
+<body>
+    <div id="message-container"></div>
+        <form id="send-container">
+        <textarea id="message-input" placeholder="Please type here..." class="content"></textarea>
+        <button type="submit" id="send-button" >Send</button> 
+        <button class="talk">Talk</button>
+        </form>
+    <script>
+        const roomName = "<%= roomName %>"
+    </script>
+    <script defer src="http://localhost:1337/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>

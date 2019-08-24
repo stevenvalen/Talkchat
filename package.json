@@ -1,0 +1,17 @@
+{
+  "name": "talkchat",
+  "version": "1.0.0",
+  "description": "Turn voice commands in to text, in a real time chat using sockets.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Valentin",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  }
+}
